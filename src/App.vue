@@ -29,7 +29,7 @@ export default {
         {
           id: 2,
           title: "learn vue.js",
-          completed: true
+          completed: false
         },
         {
           id: 3,
