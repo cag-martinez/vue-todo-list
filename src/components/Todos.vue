@@ -3,8 +3,8 @@
     <!-- v-for will loop through all of my todos. 
     todo can be called anything, the second todos is the name of my array of objects-->
     <div v-bind:key="todos.id" v-for="todos in todos">
-      <!-- using this h3 element I am pasing the title of the todos to render on the screen -->
-      <Item />
+      <!-- Passing each todo / binding each individual todo to Item from todos -->
+      <Item v-bind:todos="todos"/>
     </div>
   </div>
 </template>
