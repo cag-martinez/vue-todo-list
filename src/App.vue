@@ -1,13 +1,21 @@
 <template>
   <div id="app">
+    <!-- enveding component -->
+    <Todos/>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   </div>
 </template>
 
 <script>
+// Importing Todos component
+import Todos from './components/Todos'
+
 export default {
   name: "App",
-  components: {},
+  components: {
+  //Here I am passing the Todos component
+  Todos
+  },
   //function
   data() {
     //that will return an object of todos
