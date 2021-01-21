@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- enveding component -->
-    <Todos/>
+    <!-- enveding component and using V-bind directive to call on the todos -->
+    <Todos v-bind:todos="todos" />
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   </div>
 </template>
