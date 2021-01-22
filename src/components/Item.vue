@@ -6,6 +6,7 @@
       and calling it markComplete-->
       <input type="checkbox" v-on:change="markComplete" />
       {{todos.title}}
+      <button @click="$emit('delete-todo', todos.id)" class="delete"> Delete </button>
     </p>
   </div>
 </template>
@@ -33,4 +34,9 @@ export default {
 .is-complete {
   text-decoration: line-through crimson;
 }
+
+.delete{
+    background-color: rgba(220, 20, 60, 0.564);
+    float: right;
+    }
 </style>

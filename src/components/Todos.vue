@@ -4,7 +4,7 @@
     todo can be called anything, the second todos is the name of my array of objects-->
     <div v-bind:key="todos.id" v-for="todos in todos">
       <!-- Passing each todo / binding each individual todo to Item from todos -->
-      <Item v-bind:todos="todos"/>
+      <Item v-bind:todos="todos" v-on:delete-todos="$emit('delete-todos', todos.id)"/>
     </div>
   </div>
 </template>
