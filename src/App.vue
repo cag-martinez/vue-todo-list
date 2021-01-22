@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <!-- enveding the header component here -->
+    <Header />
     <!-- enveding component and using V-bind directive to call on the todos -->
     <Todos v-bind:todos="todos" v-on:delete-todo='deleteTodo' />
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
@@ -8,13 +10,15 @@
 
 <script>
 // Importing Todos component
+import Header from './components/layout/Header'
 import Todos from './components/Todos'
 
 export default {
   name: "App",
   components: {
   //Here I am passing the Todos component
-  Todos
+  Todos,
+  Header
   },
   //function
   data() {
