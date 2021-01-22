@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- enveding component and using V-bind directive to call on the todos -->
-    <Todos v-bind:todos="todos" v-on:delete-todos="deleteTodo" />
+    <Todos v-bind:todos="todos" v-on:delete-todo='deleteTodo' />
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   </div>
 </template>
@@ -42,7 +42,7 @@ export default {
   },
         methods:{
           deleteTodo(id){
-            this.todos = this.todos.filter(todo => todo.id !== id);
+            this.todos = this.todos.filter(todos => todos.id !== id);
           }
 }
 }
