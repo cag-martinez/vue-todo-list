@@ -67,4 +67,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
+
+.button {
+  display: inline-block;
+  border:darkgray;
+  padding: 2px;
+  /* padding: 7px 20px; */
+  background: black;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.button:hover{
+  background: darkseagreen;
+}
 </style>

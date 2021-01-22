@@ -1,7 +1,10 @@
 <template>
-    <header>
-        <textarea v-model="input" placeholder="add a to-do"> </textarea>
-    </header>
+    <div>
+        <form>
+        <input type="text" name="title" placeholder="add to-do" >
+        <input type="submit" value="Submit" class="button" >
+        </form>
+    </div>
 </template>
 
 <script>
@@ -11,5 +14,7 @@ name: "Input"
 </script>
 
 <style scoped>
-
+form {
+    align-items: flex;
+}
 </style>
