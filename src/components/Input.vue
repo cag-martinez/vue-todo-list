@@ -1,7 +1,7 @@
 <template>
   <div>
-    <form @submit.prevent="$input">
-      <input type="text" v-model="title" name="title" placeholder="add to-do" />
+    <form @submit.prevent="$addTodo">
+      <input type="text" v-model='title' name="title" placeholder="add to-do" />
       <input type="submit" value="Submit" class="button" />
     </form>
   </div>
@@ -19,15 +19,15 @@ export default {
     }
   },
   methods: {
-    Input() {
-      const todos = {
+    addTodo() {
+      const newTodo = {
         // Calling on uuid package
-        id: uuid(),
+        id: uuid.v4(),
         title: this.title,
         completed: false
       }
       // sending data to the parent
-      this.$emit("add-todo", todos);
+      this.$emit("addTodo", newTodo);
     }
   }
 };

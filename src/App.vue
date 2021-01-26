@@ -3,7 +3,7 @@
     <!-- enveding the header component here -->
     <Header />
     <!-- enveding the Input component here -->
-    <Input />
+    <Input v-on:add-todo="addTodo" />
     <!-- enveding component and using V-bind directive to call on the todos -->
     <Todos v-bind:todos="todos" v-on:delete-todo='deleteTodo' />
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
@@ -20,9 +20,10 @@ export default {
   name: "App",
   components: {
   //Here I am passing the Todos component
+  Header,
   Todos,
-  Input,
-  Header
+  Input
+  
   },
   //function
   data() {
@@ -51,7 +52,10 @@ export default {
         methods:{
           deleteTodo(id){
             this.todos = this.todos.filter(todos => todos.id !== id);
-          }
+          },
+          addTodo(newTodo){
+            this.todos = [...this.todos, newTodo]
+            }
 }
 }
 </script>
