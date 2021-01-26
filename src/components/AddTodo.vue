@@ -19,7 +19,8 @@ export default {
     }
   },
   methods: {
-    addTodo() {
+    addTodo(e) {
+      e.preventDefault();
       const newTodo = {
         // Calling on uuid package
         id: uuid.v4(),
@@ -28,6 +29,8 @@ export default {
       }
       // sending data to the parent
       this.$emit("add-todo", newTodo);
+
+      this.title="";
     }
   }
 };
