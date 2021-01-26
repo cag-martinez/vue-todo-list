@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="$addTodo">
+    <form @submit.prevent="addTodo">
       <input type="text" v-model='title' name="title" placeholder="add to-do" />
       <input type="submit" value="Submit" class="button" />
     </form>
@@ -27,7 +27,7 @@ export default {
         completed: false
       }
       // sending data to the parent
-      this.$emit("addTodo", newTodo);
+      this.$emit("add-todo", newTodo);
     }
   }
 };
