@@ -3,7 +3,7 @@
     <!-- enveding the header component here -->
     <Header />
     <!-- enveding the Input component here -->
-    <Input v-on:add-todo="addTodo" />
+    <AddTodo v-on:add-todo="addTodo" />
     <!-- enveding component and using V-bind directive to call on the todos -->
     <Todos v-bind:todos="todos" v-on:delete-todo='deleteTodo' />
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
@@ -12,7 +12,7 @@
 
 <script>
 // Importing Todos component
-import Input from './components/Input'
+import AddTodo from './components/AddTodo'
 import Header from './components/layout/Header'
 import Todos from './components/Todos'
 
@@ -22,7 +22,7 @@ export default {
   //Here I am passing the Todos component
   Header,
   Todos,
-  Input
+  AddTodo
   
   },
   //function

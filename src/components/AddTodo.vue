@@ -12,7 +12,7 @@
 import uuid from "uuid";
 
 export default {
-  name: "Input",
+  name: "AddTodo",
   data() {
     return {
       title: ""
