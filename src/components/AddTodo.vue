@@ -38,17 +38,19 @@ export default {
 
 <style scoped>
 form {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  padding: 2.05px;
   
 }
 input [type="text"] {
-  flex: 2;
+  /* flex: 2; */
   padding: 5px;
 }
 
 input [type="submit"] {
   flex: 2;
-  padding: 5px;
+  padding-left: 5px;
   border: 5px;
 }
 </style>

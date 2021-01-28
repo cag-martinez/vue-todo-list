@@ -70,6 +70,7 @@ export default {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  background: silver;
 }
 
 .button {
@@ -84,4 +85,5 @@ body {
 .button:hover{
   background: darkseagreen;
 }
+
 </style>
