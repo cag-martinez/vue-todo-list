@@ -7,14 +7,20 @@
     <!-- enveding component and using V-bind directive to call on the todos -->
     <Todos v-bind:todos="todos" v-on:delete-todo='deleteTodo' />
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+// import Vue from 'vue'
+// import VueRouter from 'vue-router'
+
 // Importing Todos component
 import AddTodo from './components/AddTodo'
 import Header from './components/layout/Header'
 import Todos from './components/Todos'
+
+
 
 export default {
   name: "App",
@@ -58,6 +64,11 @@ export default {
             }
 }
 }
+
+
+
+
+
 </script>
 
 <style>
