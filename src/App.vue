@@ -9,13 +9,15 @@
     <router-link to="/">Go to Home</router-link>
     <br>
     <router-link to="/Todos">Go to Todos</router-link>
+    <router-view></router-view>
   </p>
+    
     <!-- enveding the Input component here -->
     <AddTodo v-on:add-todo="addTodo" />
     <!-- enveding component and using V-bind directive to call on the todos -->
     <Todos v-bind:todos="todos" v-on:delete-todo='deleteTodo' />
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <router-view></router-view>
+    
   </div>
 </template>
 

@@ -1,13 +1,15 @@
 <template>
-    <header>
+    <div class="home">
         <h1>This is the landing page</h1>
-    </header>
+    </div>
 </template>
 
 <script>
 export default {
     name: "Landing",
-
+      props: {
+    msg: String
+  }
 }
 </script>
 
