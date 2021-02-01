@@ -2,6 +2,14 @@
   <div id="app">
     <!-- enveding the header component here -->
     <Header />
+      <p>
+    <!-- use the router-link component for navigation. -->
+    <!-- specify the link by passing the `to` prop. -->
+    <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
+    <router-link to="/">Go to Home</router-link>
+    <br>
+    <router-link to="/Todos">Go to Todos</router-link>
+  </p>
     <!-- enveding the Input component here -->
     <AddTodo v-on:add-todo="addTodo" />
     <!-- enveding component and using V-bind directive to call on the todos -->
