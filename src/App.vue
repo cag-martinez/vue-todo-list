@@ -6,9 +6,9 @@
     <!-- use the router-link component for navigation. -->
     <!-- specify the link by passing the `to` prop. -->
     <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
-    <router-link to="/">Go to Home</router-link>
+    <router-link to="/Landing/string">Go to Home</router-link>
     <br>
-    <router-link to="/Todos">Go to Todos</router-link>
+    <router-link to="/Todos/title">Go to Todos</router-link>
     <router-view></router-view>
   </p>
     

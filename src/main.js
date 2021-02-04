@@ -13,17 +13,18 @@ Vue.config.productionTip = false
 // const Todos = { template: '<div>Todos</div>'}
 
 const routes = [
-  { path: '/', component: Landing },
-  { path: '/Landing', component: Landing },
+  { path: '/:string', component: Landing },
+  { path: '/Landing/:string', component: Landing },
   { path: "/Todos", component: Todos},
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 new Vue({
   el: '#app',
   router,
   render: h => h(App),
-}).$mount('#app')
+})

@@ -1,15 +1,13 @@
 <template>
     <div class="home">
-        <h1>This is the landing page</h1>
+        <h1>This is the landing page {{ $route.params.string }}</h1>
     </div>
 </template>
 
 <script>
 export default {
     name: "Landing",
-      props: {
-    msg: String
-  }
+
 }
 </script>
 
