@@ -12,19 +12,24 @@ Vue.config.productionTip = false
 // const Landing = { template: '<div>Landing</div>' }
 // const Todos = { template: '<div>Todos</div>'}
 
-const routes = [
-  { path: '/:string', component: Landing },
-  { path: '/Landing/:string', component: Landing },
-  { path: "/Todos", component: Todos},
-];
+// const routes = [
+//   { path: '/', component: Landing },
+//   { path: '/Landing/:string', component: Landing },
+//   { path: "/Todos/:todos", component: Todos},
+// ];
 
 const router = new VueRouter({
-  routes,
-  mode: 'history'
+  
+  mode: 'history',
+  routes: [
+    { path: '/', component: Landing },
+    { path: '/Landing/:string', component: Landing },
+    { path: "/Todos/:todos", component: Todos},
+  ]
 })
 
 new Vue({
   el: '#app',
   router,
   render: h => h(App),
-})
+}).$mount('#app')

@@ -8,7 +8,7 @@
     <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
     <router-link to="/Landing/string">Go to Home</router-link>
     <br>
-    <router-link to="/Todos/title">Go to Todos</router-link>
+    <router-link to="/Todos/todos">Go to Todos</router-link>
     <router-view></router-view>
   </p>
     
@@ -39,7 +39,9 @@ export default {
   //Here I am passing the Todos component
   Header,
   Todos,
-  AddTodo
+  AddTodo,
+  // Vue,
+  // VueRouter
   
   },
   //function
