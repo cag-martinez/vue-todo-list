@@ -2,15 +2,17 @@
   <div id="app">
     <!-- enveding the header component here -->
     <Header />
-      <p>
+    <div id="nav">
+    <router-view>
     <!-- use the router-link component for navigation. -->
     <!-- specify the link by passing the `to` prop. -->
     <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
-    <router-link to="/Landing/string">Go to Home</router-link>
-    <br>
-    <router-link to="/Todos/todos">Go to Todos</router-link>
-    <router-view></router-view>
-  </p>
+    <router-link to="/">Go to Home</router-link> ||
+    <router-link to="/Landing">Go to Home</router-link> ||
+    <router-link to="/Todos">Go to Todos</router-link>
+    </router-view>
+    </div>
+  
     
     <!-- enveding the Input component here -->
     <AddTodo v-on:add-todo="addTodo" />
@@ -108,6 +110,20 @@ body {
 }
 .button:hover{
   background: darkseagreen;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  padding: 10px;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 
 </style>

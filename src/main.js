@@ -1,16 +1,15 @@
 // this is the file in which i have to inport vue router
-import Vue from 'vue'
-import VueRouter from "vue-router"
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-import App from './App.vue'
-import Landing from './components/Landing'
-import Todos from "./components/Todos"
+import App from "./App.vue";
+import Landing from "../src/views/Landing";
+import Todos from "./components/Todos";
 
 Vue.use(VueRouter);
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
-// const Landing = { template: '<div>Landing</div>' }
-// const Todos = { template: '<div>Todos</div>'}
+
 
 // const routes = [
 //   { path: '/', component: Landing },
@@ -18,18 +17,20 @@ Vue.config.productionTip = false
 //   { path: "/Todos/:todos", component: Todos},
 // ];
 
-const router = new VueRouter({
-  
-  mode: 'history',
-  routes: [
-    { path: '/', component: Landing },
-    { path: '/Landing/:string', component: Landing },
-    { path: "/Todos/:todos", component: Todos},
+
+  // mode: "history",
+  const routes = [
+    { path: "/", component: Landing },
+    { path: "/Landing/:string", component: Landing },
+    { path: "/Todos/:todos", component: Todos },
   ]
-})
+
+  const router = new VueRouter({
+    routes
+});
 
 new Vue({
-  el: '#app',
+  el: "#app",
   router,
-  render: h => h(App),
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");
